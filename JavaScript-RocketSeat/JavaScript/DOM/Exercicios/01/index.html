@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercicios DOM</title>
+</head>
+<body>
+  
+  <button id="button">opa</button>
+  <div class="box" ></div>
+
+  <script>
+    var button = document.getElementById('button');
+    var box = document.querySelector('.box');
+
+    button.onclick = function(){
+      var squares = document.createElement('div');
+    
+      squares.style.width = '50px';
+      squares.style.height = '50px';
+      squares.style.backgroundColor = '#000000';
+      
+      box.appendChild(squares)
+    }
+  </script>
+</body>
+</html>

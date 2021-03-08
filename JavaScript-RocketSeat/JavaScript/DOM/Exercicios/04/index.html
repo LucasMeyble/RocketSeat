@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    
+    <input type="text" />
+    <button id="button">enviar</button>
+    
+    <ul id="lista"></ul>
+
+    <script>
+      var nome = document.querySelector("input");
+      var button = document.getElementById('button');
+      var lista = document.getElementById("lista");
+
+      button.onclick = function () {
+        var liElement = document.createElement("li");
+        var texto = document.createTextNode(nome.value);
+
+        lista.appendChild(liElement);
+        lista.appendChild(texto);
+      };
+    </script>
+  </body>
+</html>

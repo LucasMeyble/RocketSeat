@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercicios DOM</title>
+  </head>
+  <body>
+    <button id="button">opa</button>
+    <div class="box"></div>
+
+    <script>
+      var button = document.getElementById("button");
+      var box = document.querySelector(".box"); 
+
+      function getRandomColor() {
+        var letters = "0123456789ABCDEF";
+        var color = "#";
+        for (var i = 0; i < 6; i++) {
+          color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+      }
+
+      button.onclick = function () {
+        var squares = document.createElement("div");
+
+        squares.style.width = "50px";
+        squares.style.height = "50px";
+        squares.style.backgroundColor = "#000000";
+
+        squares.onmouseover = function(){
+          squares.style.backgroundColor = getRandomColor();
+        }
+        box.appendChild(squares);
+      };
+
+      
+      
+    </script>
+  </body>
+</html>

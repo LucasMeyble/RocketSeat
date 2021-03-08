@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curso JS</title>
+</head>
+<body>
+
+  <div id="app">
+    <input type="text" name="nome">
+    <button class="botao">adcionar</button>
+  </div>
+
+  <script>
+    var inputElement = document.querySelector('input[name=nome]'); //aqui eu pego o primeiro input com name=nome
+    var btnElement = document.querySelector('button.botao'); //aqui eu pego o button que tenha a class botao
+
+    btnElement.onclick = function(){
+      var text = inputElement.value;
+
+      alert(text);
+    }
+
+  </script>
+</body>
+</html>

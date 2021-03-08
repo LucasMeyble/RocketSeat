@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Curson JS</title>
+  </head>
+  <body>
+    <!--manipulando elemntos com JS-->
+    <div id="app">
+      <input id="nome" />
+    </div>
+    
+
+    <script>
+      var linkElement = document.createElement("a");
+      linkElement.setAttribute("href", "http://youtube.com.br");
+
+      var textArea = document.createTextNode("link para o youtube");
+      linkElement.appendChild(textArea);
+
+      var containerElement = document.querySelector("#app");
+      containerElement.appendChild(linkElement);
+
+      var inputElement = document.querySelector("#nome");
+      containerElement.removeChild(inputElement);
+    </script>
+  </body>
+</html>
